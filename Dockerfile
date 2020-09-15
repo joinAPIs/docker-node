@@ -32,7 +32,7 @@ RUN \
             "https://raw.githubusercontent.com/joinAPIs/helloworld/master/package.json" && \
         curl -o /app/index.js -L \
             "https://raw.githubusercontent.com/joinAPIs/helloworld/master/index.js" && \
-        npm install \
+        npm install; \
     fi && \
     echo "**** cleanup ****" && \
     apk del --purge build-dependencies && \
