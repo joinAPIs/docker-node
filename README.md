@@ -14,9 +14,10 @@ docker create \
   -e PGID=1000 \
   -e TZ=Europe/London \
   -p 3000:3000 \
-  -v </path/to/appdata>:/data \
+  -v </path/to/appdata>:/app \
+  -v </path/to/config>:/config \
   --restart unless-stopped \
-  xeronick/node
+  joinapis/node
 ```
 
 ## Parameters
@@ -29,7 +30,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
-| `-v /data` | Contains your content and all relevant configuration files. |
+| `-v /app` | Contains your content and all relevant app files. |
+| `-v /config` | Contains your content and all relevant config files. |
 
 ## Environment variables from files (Docker secrets)
 
