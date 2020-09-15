@@ -31,6 +31,9 @@ RUN \
        curl -o \
           /app/package.json -L \
 	   "https://raw.githubusercontent.com/joinAPIs/helloworld/master/package.json" && \
+       curl -o \
+          /app/index.js -L \
+	   "https://raw.githubusercontent.com/joinAPIs/helloworld/master/index.js" && \
        npm install \
  fi && \
  echo "**** cleanup ****" && \
