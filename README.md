@@ -72,7 +72,7 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 * container version number
   * `docker inspect -f '{{ index .Config.Labels "build_version" }}' node`
 * image version number
-  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' xeronick/node`
+  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' joinapis/node`
 
 ## Updating Info
 
@@ -81,7 +81,7 @@ Most of our images are static, versioned, and require an image update and contai
 Below are the instructions for updating containers:
 
 ### Via Docker Run/Create
-* Update the image: `docker pull xeronick/node`
+* Update the image: `docker pull joinapis/node`
 * Stop the running container: `docker stop node`
 * Delete the container: `docker rm node`
 * Recreate a new container with the same docker create parameters as instructed above (if mapped correctly to a host folder, your `/data` folder and settings will be preserved)
