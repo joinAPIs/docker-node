@@ -25,7 +25,7 @@ RUN \
         npm \
         yarn && \
     echo "**** create app directory if it does not exist ****" && \
-    if [ ! -d "/app" ]; then \
+    if [ ! "$(ls -A /app)" ]; then \
         mkdir /app && \
         cd /app && \
         curl -o /app/package.json -L \
