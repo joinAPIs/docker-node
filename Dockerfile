@@ -23,7 +23,7 @@ RUN \
         nano \
         nodejs-current \
         npm \
-        yarn && \
+        yarn \
     fi && \
     echo "**** cleanup ****" && \
     apk del --purge build-dependencies && \
