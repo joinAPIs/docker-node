@@ -13,12 +13,12 @@ ENV NODE_ENV="production"
 RUN \
     echo "**** install build packages ****" && \
     apk add --no-cache --virtual=build-dependencies \
-        curl \
         g++ \
         make && \
     echo "**** install runtime packages ****" && \
     apk add --no-cache --upgrade \
         alpine-base \
+        curl \
         git \
         nano \
         nodejs-current \
