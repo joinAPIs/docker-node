@@ -2,5 +2,14 @@
 
 cd /app || exit
 
+if [ ! -f "/app/index.js" ]; then
+	cp /defaults/index.js /app/
+fi
+
+if [ ! -f "/app/package.json" ]; then
+	cp /defaults/package.json /app/
+	npm install
+fi
+
 exec \
 	s6-setuidgid abc /usr/bin/node index.js

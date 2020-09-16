@@ -24,14 +24,6 @@ RUN \
         nodejs-current \
         npm \
         yarn && \
-    echo "**** create app directory if it does not exist ****" && \
-    if [ ! "$(ls -A /app)" ]; then \
-        cd /app && \
-        curl -o /app/package.json -L \
-            "https://raw.githubusercontent.com/joinAPIs/helloworld/master/package.json" && \
-        curl -o /app/index.js -L \
-            "https://raw.githubusercontent.com/joinAPIs/helloworld/master/index.js" && \
-        npm install; \
     fi && \
     echo "**** cleanup ****" && \
     apk del --purge build-dependencies && \
